@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTour">
-        <activity android:name=".DetailedActivity"></activity>
+        <activity android:name=".AttractionsActivity"></activity>
+        <activity android:name=".DetailedActivity" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
