@@ -1,6 +1,7 @@
 package com.codigo.mytour;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -33,6 +34,7 @@ import java.util.Map;
 public class SignUpActivity extends AppCompatActivity {
     LinearLayout enter,get;
     Button get_OTP,verify;
+    TextView login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +45,17 @@ public class SignUpActivity extends AppCompatActivity {
         get_OTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               enter.setVisibility(View.VISIBLE);
-               get.setVisibility(View.INVISIBLE);
+                enter.setVisibility(View.VISIBLE);
+                get.setVisibility(View.INVISIBLE);
             }
         });
+        login=findViewById(R.id.login);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
+            }
+        });
+
     }
 }

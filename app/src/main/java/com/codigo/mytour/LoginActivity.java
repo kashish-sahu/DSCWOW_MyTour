@@ -42,10 +42,17 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         sign_up=findViewById(R.id.sign_up);
+        login=findViewById(R.id.button);
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
               startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
             }
         });
     }
