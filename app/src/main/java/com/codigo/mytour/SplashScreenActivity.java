@@ -33,7 +33,7 @@ handler.postDelayed(new Runnable() {
     @Override
     public void run() {
         finish();
-//        startActivity(new Intent(com.example.neeteducator.SplashScreenActivity.this,LoginActivity.class));
+        startActivity(new Intent(SplashScreenActivity.this,HomeActivity.class));
     }
 },3000);
     }
