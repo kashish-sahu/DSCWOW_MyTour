@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item
+    android:id="@+id/edit"
+    android:icon="@drawable/ic_baseline_menu"
+    android:title="HOME"/>
+    <item
+        android:id="@+id/timeTable"
+        android:title="ATTRACTIONS"
+        android:icon="@drawable/ic_baseline_menu"/>
+            <item
+                android:id="@+id/bookMark"
+                android:title="ACCOMODATIONS"
+                android:icon="@drawable/ic_baseline_menu"/>
+
+            <item
+                android:id="@+id/doubts"
+                android:title="EVENTS"
+                android:icon="@drawable/ic_baseline_menu"/>
+            <item
+                android:id="@+id/analytics"
+                android:title="SETTINGS"
+                android:icon="@drawable/ic_baseline_menu"/>
+</menu>
