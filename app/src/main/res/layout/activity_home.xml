@@ -96,6 +96,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Where to Stay"
+                        android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
                 </LinearLayout>
@@ -123,6 +124,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Extras"
+                        android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
                 </LinearLayout>
@@ -160,6 +162,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Events"
+                        android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
 
@@ -189,6 +192,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Map"
+                        android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
                 </LinearLayout>
@@ -217,11 +221,34 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Gallery"
+                        android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
                 </LinearLayout>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="SUGGESTED PLACES"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+            </HorizontalScrollView>
 
         </LinearLayout>
 
