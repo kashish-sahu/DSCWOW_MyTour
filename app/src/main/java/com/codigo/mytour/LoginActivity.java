@@ -35,12 +35,19 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
     ImageView bg;
-    TextView register;
+    TextView register,sign_up;
     Button login;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        sign_up=findViewById(R.id.sign_up);
+        sign_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
+            }
+        });
     }
+
 }
