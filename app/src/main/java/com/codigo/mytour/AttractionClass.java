@@ -5,6 +5,12 @@ public class AttractionClass {
     String description;
     int image;
 
+    public AttractionClass(String title, String description, int image) {
+        this.title = title;
+        this.description = description;
+        this.image = image;
+    }
+
     public String getTitle() {
         return title;
     }

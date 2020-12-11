@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +18,7 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.My
     Activity mContext;
     List<AttractionClass> cards_list;
 
-    public AttractionAdapter(Activity mContext, List<AttractionClass> analytics_list) {
+    public AttractionAdapter(Activity mContext, List<AttractionClass> cards_list) {
         this.mContext = mContext;
         this.cards_list = cards_list;
     }
@@ -32,10 +33,11 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull AttractionAdapter.MyViewHolder holder, int position) {
-
-//        Glide.with(mContext)
-//                .load(R.drawable.mainbg)
-//                .into(img);
+        holder.title.setText(cards_list.get(position).getTitle());
+        holder.desc.setText(cards_list.get(position).getDescription());
+        Glide.with(mContext)
+                .load(R.drawable.mainbg)
+                .into(holder.img);
     }
 
     @Override
@@ -45,9 +47,12 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.My
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView img;
+        TextView title,desc;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             img=itemView.findViewById(R.id.img);
+            title=itemView.findViewById(R.id.title);
+            desc=itemView.findViewById(R.id.desc);
         }
     }
 }

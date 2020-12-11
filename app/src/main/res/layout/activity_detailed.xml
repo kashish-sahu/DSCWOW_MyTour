@@ -7,412 +7,75 @@
     android:id="@+id/drawer_layout"
     tools:context=".HomeActivity"
     android:background="@color/white">
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/mainbg"
-            android:scaleType="fitXY"
             android:background="@color/black"
-            />
+            android:scaleType="fitXY"
+            android:src="@drawable/mainbg" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <androidx.cardview.widget.CardView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="10dp"
-                android:id="@+id/menu"
-                app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="@color/white">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/black"
-                    android:background="@drawable/ic_baseline_menu"/>
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="MYSURU TOURISM"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="50dp"
-                android:textColor="@color/white"
-                android:textSize="30dp"
-                android:textStyle="bold"/>
-        </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/arrow_back"
             android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:paddingHorizontal="20dp"
-            android:layout_marginTop="200dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_button"
-            android:text="Plan Trip"/>
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="270dp"
-            android:backgroundTint="@color/white"
             android:background="@drawable/rounded_corners"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="30dp"
-                android:layout_marginHorizontal="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/rounded_stroke"
-                        app:cardCornerRadius="10dp">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Transportation"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center">
-                    </TextView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/rounded_stroke"
-                        app:cardCornerRadius="10dp">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
-                    </androidx.cardview.widget.CardView>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Where to Stay"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center">
-                    </TextView>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        app:cardCornerRadius="10dp">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
-                    </androidx.cardview.widget.CardView>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Extras"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center">
-                    </TextView>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="30dp"
-                android:layout_marginHorizontal="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/rounded_stroke"
-                        app:cardCornerRadius="10dp">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Events"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center">
-                    </TextView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/rounded_stroke"
-                        app:cardCornerRadius="10dp">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
-                    </androidx.cardview.widget.CardView>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Map"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center">
-                    </TextView>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/rounded_stroke"
-                        app:cardCornerRadius="10dp">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
-                    </androidx.cardview.widget.CardView>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Gallery"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center">
-                    </TextView>
-                </LinearLayout>
-
-            </LinearLayout>
-
+            android:backgroundTint="@color/white"
+            android:orientation="vertical"
+            android:padding="20dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="16dp"
+                android:text="MYSORE PALACE"
+                android:textSize="25sp"
+                android:layout_marginTop="10dp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:text="SUGGESTED PLACES"/>
-
-            <HorizontalScrollView
+                android:textColor="@color/black"/>
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:scrollbars="none"
-                android:layout_marginHorizontal="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            app:cardCornerRadius="20dp"
-                            android:clipChildren="true"
-                            app:cardPreventCornerOverlap="false"
-                            android:layout_gravity="center">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/mainbg"
-                                android:scaleType="fitXY"/>
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Museums"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center"/>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            app:cardCornerRadius="20dp"
-                            android:clipChildren="true"
-                            app:cardPreventCornerOverlap="false"
-                            android:layout_gravity="center">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/mainbg"
-                                android:scaleType="fitXY"/>
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Parks"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center"/>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            app:cardCornerRadius="20dp"
-                            android:clipChildren="true"
-                            app:cardPreventCornerOverlap="false"
-                            android:layout_gravity="center">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/mainbg"
-                                android:scaleType="fitXY"/>
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Sports"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center"/>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            app:cardCornerRadius="20dp"
-                            android:clipChildren="true"
-                            app:cardPreventCornerOverlap="false"
-                            android:layout_gravity="center">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/mainbg"
-                                android:scaleType="fitXY"/>
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Food"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center"/>
-
-                    </LinearLayout>
-                </LinearLayout>
-            </HorizontalScrollView>
-
+                android:text="LOCATION"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sayyaji Rao Rd, Agrahara, Chamrajpura, Mysuru"
+                android:textSize="15sp"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ABOUT THIS PLACE"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Mysore Palace is a historical palace and the royal residence at Mysore in the Indian State of Karnataka. It is the official residence of the Wadiyar dynasty and the seat of the Kingdom of Mysore. The palace is in the centre of Mysore, and faces the Chamundi Hills eastward. "
+                android:textSize="15sp"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/black" />
         </LinearLayout>
 
     </FrameLayout>
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:menu="@menu/navigation_menu_drawer"
-        android:id="@+id/nav_menu"
-        app:itemIconTint="#909090"
-        app:itemTextColor="@color/black"
-        android:theme="@style/MyActionButtonStyle"
-        android:background="@color/white"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

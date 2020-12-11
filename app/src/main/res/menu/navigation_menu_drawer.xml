@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 <item
-    android:id="@+id/edit"
+    android:id="@+id/home"
     android:icon="@drawable/ic_baseline_menu"
     android:title="HOME"/>
     <item
-        android:id="@+id/timeTable"
+        android:id="@+id/attraction"
         android:title="ATTRACTIONS"
         android:icon="@drawable/ic_baseline_menu"/>
             <item
-                android:id="@+id/bookMark"
+                android:id="@+id/accomodation"
                 android:title="ACCOMODATIONS"
                 android:icon="@drawable/ic_baseline_menu"/>
 
             <item
-                android:id="@+id/doubts"
+                android:id="@+id/event"
                 android:title="EVENTS"
                 android:icon="@drawable/ic_baseline_menu"/>
             <item
-                android:id="@+id/analytics"
+                android:id="@+id/settings"
                 android:title="SETTINGS"
                 android:icon="@drawable/ic_baseline_menu"/>
 </menu>

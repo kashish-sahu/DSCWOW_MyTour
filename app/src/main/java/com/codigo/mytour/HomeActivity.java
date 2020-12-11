@@ -81,6 +81,10 @@ public class HomeActivity extends AppCompatActivity{
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.attraction: startActivity(new Intent(HomeActivity.this,AttractionsActivity.class));
+                    break;
+                }
                 return true;
             }
         });
