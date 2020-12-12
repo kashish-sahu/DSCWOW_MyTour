@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
 <item
     android:id="@+id/home"
-    android:icon="@drawable/ic_baseline_menu"
+    android:icon="@drawable/ic_home"
     android:title="HOME"/>
     <item
         android:id="@+id/attraction"
@@ -12,14 +11,13 @@
             <item
                 android:id="@+id/accomodation"
                 android:title="ACCOMODATIONS"
-                android:icon="@drawable/ic_baseline_menu"/>
-
+                android:icon="@drawable/ic_hotel"/>
             <item
                 android:id="@+id/event"
-                android:title="EVENTS"
-                android:icon="@drawable/ic_baseline_menu"/>
+                android:title="FOODS"
+                android:icon="@drawable/ic_dish"/>
             <item
                 android:id="@+id/settings"
-                android:title="SETTINGS"
-                android:icon="@drawable/ic_baseline_menu"/>
+                android:title="LOGOUT"
+                android:icon="@drawable/ic_logout"/>
 </menu>

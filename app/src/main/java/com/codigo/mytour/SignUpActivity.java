@@ -35,6 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
     LinearLayout enter,get;
     Button get_OTP,verify;
     TextView login;
+    ImageView bg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +43,10 @@ public class SignUpActivity extends AppCompatActivity {
         enter=findViewById(R.id.enter);
         get=findViewById(R.id.get);
         get_OTP=findViewById(R.id.get_otp);
+        bg=findViewById(R.id.bg);
+        Glide.with(this)
+                .load(R.drawable.signup_vec)
+                .into(bg);
         get_OTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

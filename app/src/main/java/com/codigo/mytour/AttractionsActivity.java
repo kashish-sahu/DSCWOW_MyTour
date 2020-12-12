@@ -18,9 +18,9 @@ public class AttractionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_attractions);
         cards_list=new ArrayList<>();
         cardsView=findViewById(R.id.cardsView);
-        cards_list.add(new AttractionClass("DAINTHLEN FALLS","DAINTHLEN FALLS",R.drawable.mainbg));
-        cards_list.add(new AttractionClass("MYSORE PALACE","DAINTHLEN FALLS",R.drawable.mainbg));
-        cards_list.add(new AttractionClass("DAINTHLEN FALLS","DAINTHLEN FALLS",R.drawable.mainbg));
+        cards_list.add(new AttractionClass("DAINTHLEN FALLS","DAINTHLEN FALLS","","",""));
+        cards_list.add(new AttractionClass("MYSORE PALACE","DAINTHLEN FALLS","","",""));
+        cards_list.add(new AttractionClass("DAINTHLEN FALLS","DAINTHLEN FALLS","","",""));
         cardsView.setLayoutManager(new LinearLayoutManager(this));
         AttractionAdapter adapter = new AttractionAdapter(this,cards_list);
         cardsView.setAdapter(adapter);

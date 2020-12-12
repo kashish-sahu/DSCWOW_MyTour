@@ -16,30 +16,31 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.MyViewHolder> {
+public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHolder> {
     Activity mContext;
-    List<AttractionClass> cards_list;
+    List<HotelClass> hotels_list;
 
-    public AttractionAdapter(Activity mContext, List<AttractionClass> cards_list) {
+    public HotelsAdapter(Activity mContext, List<HotelClass> hotels_list) {
         this.mContext = mContext;
-        this.cards_list = cards_list;
+        this.hotels_list = hotels_list;
     }
     @NonNull
     @Override
-    public AttractionAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public HotelsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.attraction_card,parent,false);
+                .inflate(R.layout.hotel_card,parent,false);
         return new MyViewHolder(view);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AttractionAdapter.MyViewHolder holder, int position) {
-        holder.title.setText(cards_list.get(position).getTitle());
-        holder.desc.setText(cards_list.get(position).getDescription());
+    public void onBindViewHolder(@NonNull HotelsAdapter.MyViewHolder holder, int position) {
+        holder.name.setText(hotels_list.get(position).getName());
+        holder.address.setText(hotels_list.get(position).getAddress());
         Glide.with(mContext)
                 .load(R.drawable.mainbg)
                 .into(holder.img);
+        holder.cost.setText(String.valueOf(hotels_list.get(position).getPrice()));
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,18 +51,19 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.My
 
     @Override
     public int getItemCount() {
-        return cards_list.size();
+        return hotels_list.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView img;
         CardView card;
-        TextView title,desc;
+        TextView name,address,cost;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             img=itemView.findViewById(R.id.img);
-            title=itemView.findViewById(R.id.title);
-            desc=itemView.findViewById(R.id.desc);
+            name=itemView.findViewById(R.id.name);
+            address=itemView.findViewById(R.id.address);
+            cost=itemView.findViewById(R.id.cost);
             card=itemView.findViewById(R.id.card);
         }
     }

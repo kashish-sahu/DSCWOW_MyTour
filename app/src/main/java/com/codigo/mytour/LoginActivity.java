@@ -43,6 +43,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         sign_up=findViewById(R.id.sign_up);
         login=findViewById(R.id.button);
+        bg=findViewById(R.id.imageView);
+        Glide.with(this)
+                .load(R.drawable.login_vec)
+                .into(bg);
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

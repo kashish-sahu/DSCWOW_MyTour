@@ -63,7 +63,8 @@ import java.util.TimerTask;
 public class HomeActivity extends AppCompatActivity{
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    CardView menu;
+    CardView menu,facility,food;
+    ImageView bg,img_a,img_b,img_c,img_d;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,18 +73,62 @@ public class HomeActivity extends AppCompatActivity{
         navigationView=findViewById(R.id.nav_menu);
         drawerLayout=findViewById(R.id.drawer_layout);
         menu = findViewById(R.id.menu);
+        food=findViewById(R.id.food);
+        bg=findViewById(R.id.bg);
+        img_a=findViewById(R.id.img_a);
+                img_b=findViewById(R.id.img_b);
+                img_c=findViewById(R.id.img_c);
+                img_d=findViewById(R.id.img_d);
+                Glide.with(this)
+                        .load(R.drawable.mainbg)
+                        .into(img_a);
+                Glide.with(this)
+                .load(R.drawable.mainbg)
+                .into(img_b);
+                Glide.with(this)
+                .load(R.drawable.mainbg)
+                .into(img_c);
+                Glide.with(this)
+                .load(R.drawable.mainbg)
+                .into(img_d);
+        Glide.with(this)
+                .load(R.drawable.mainbgnew)
+                .into(bg);
+
+        View header = navigationView.getHeaderView(0);
+        ImageView img = header.findViewById(R.id.img);
+        Glide.with(this)
+                .load(R.drawable.mainbg)
+                .into(img);
+
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,FoodsActivity.class));
+            }
+        });
+        facility=findViewById(R.id.facility);
+        facility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,FacilitiesActivity.class));
+            }
+        });
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 drawerLayout.openDrawer(Gravity.LEFT);
             }
         });
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.attraction: startActivity(new Intent(HomeActivity.this,AttractionsActivity.class));
                     break;
+                    case R.id.accomodation: startActivity(new Intent(HomeActivity.this,HotelsActivity.class));
+                        break;
                 }
                 return true;
             }
