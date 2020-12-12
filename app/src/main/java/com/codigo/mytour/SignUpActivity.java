@@ -43,7 +43,7 @@ public class SignUpActivity extends AppCompatActivity {
         enter=findViewById(R.id.enter);
         get=findViewById(R.id.get);
         get_OTP=findViewById(R.id.get_otp);
-        bg=findViewById(R.id.bg);
+        bg=findViewById(R.id.imageView);
         Glide.with(this)
                 .load(R.drawable.signup_vec)
                 .into(bg);
