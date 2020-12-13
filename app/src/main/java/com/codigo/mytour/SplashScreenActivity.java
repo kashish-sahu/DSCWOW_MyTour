@@ -3,6 +3,7 @@ package com.codigo.mytour;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
@@ -18,8 +19,13 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        Window window=getWindow();
+        window.setStatusBarColor(0xffbe9b79);
         img=findViewById(R.id.main_logo);
+        Glide.with(this)
+                .load(R.drawable.logo)
+                .into(img);
+
         //   img=findViewById(R.id.start);
 //    InputStream stream=null;
 //        try {

@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -43,6 +44,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         sign_up=findViewById(R.id.sign_up);
         login=findViewById(R.id.button);
+        bg=findViewById(R.id.imageView);
+        Glide.with(this)
+                .load(R.drawable.login_vec)
+                .into(bg);
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

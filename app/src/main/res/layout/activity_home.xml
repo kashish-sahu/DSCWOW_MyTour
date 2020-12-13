@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/mainbg"
+            android:id="@+id/bg"
             android:scaleType="fitXY"
             android:background="@color/black"
             />
@@ -54,6 +54,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:textColor="@color/black"
+            android:visibility="invisible"
             android:paddingHorizontal="20dp"
             android:layout_marginTop="200dp"
             android:layout_marginLeft="10dp"
@@ -85,19 +86,22 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:id="@+id/facility"
                         android:background="@drawable/rounded_stroke"
                         app:cardCornerRadius="10dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:background="@drawable/online_class"></ImageView>
+                        android:backgroundTint="@color/orange"
+                        android:background="@drawable/ic_bus"></ImageView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Transportation"
+                        android:textColor="@color/black"
                         android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
@@ -116,18 +120,21 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:id="@+id/accomodation"
                         android:background="@drawable/rounded_stroke"
                         app:cardCornerRadius="10dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
+                            android:backgroundTint="@color/orange"
+                            android:background="@drawable/ic_hotel"></ImageView>
                     </androidx.cardview.widget.CardView>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Where to Stay"
+                        android:textColor="@color/black"
                         android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
@@ -145,17 +152,20 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:id="@+id/volunteer"
                         app:cardCornerRadius="10dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
+                            android:backgroundTint="@color/orange"
+                            android:background="@drawable/ic_tourist"></ImageView>
                     </androidx.cardview.widget.CardView>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Extras"
+                        android:text="Volunteer"
+                        android:textColor="@color/black"
                         android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
@@ -181,19 +191,22 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:id="@+id/food"
                         android:background="@drawable/rounded_stroke"
                         app:cardCornerRadius="10dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
+                            android:backgroundTint="@color/orange"
+                            android:background="@drawable/ic_dish"></ImageView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Events"
+                        android:text="Food"
+                        android:textColor="@color/black"
                         android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
@@ -212,18 +225,21 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:id="@+id/map"
                         android:background="@drawable/rounded_stroke"
                         app:cardCornerRadius="10dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
+                            android:backgroundTint="@color/orange"
+                            android:background="@drawable/ic_destination"></ImageView>
                     </androidx.cardview.widget.CardView>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Map"
+                        android:textColor="@color/black"
                         android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
@@ -241,18 +257,21 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:id="@+id/gallery"
                         android:background="@drawable/rounded_stroke"
                         app:cardCornerRadius="10dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:background="@drawable/online_class"></ImageView>
+                            android:backgroundTint="@color/orange"
+                            android:background="@drawable/ic_gallery"></ImageView>
                     </androidx.cardview.widget.CardView>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Gallery"
+                        android:textColor="@color/black"
                         android:layout_marginTop="5dp"
                         android:gravity="center">
                     </TextView>
@@ -294,7 +313,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mainbg"
+                                android:id="@+id/img_a"
                                 android:scaleType="fitXY"/>
                         </androidx.cardview.widget.CardView>
 
@@ -324,7 +343,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mainbg"
+                                android:id="@+id/img_b"
                                 android:scaleType="fitXY"/>
                         </androidx.cardview.widget.CardView>
 
@@ -354,7 +373,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mainbg"
+                                android:id="@+id/img_c"
                                 android:scaleType="fitXY"/>
                         </androidx.cardview.widget.CardView>
 
@@ -384,7 +403,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mainbg"
+                                android:id="@+id/img_d"
                                 android:scaleType="fitXY"/>
                         </androidx.cardview.widget.CardView>
 
@@ -396,11 +415,9 @@
                             android:textColor="@color/black"
                             android:layout_marginTop="10dp"
                             android:gravity="center"/>
-
                     </LinearLayout>
                 </LinearLayout>
             </HorizontalScrollView>
-
         </LinearLayout>
 
     </FrameLayout>
@@ -409,7 +426,7 @@
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu_drawer"
         android:id="@+id/nav_menu"
-        app:itemIconTint="#909090"
+        app:itemIconTint="@color/orange"
         app:itemTextColor="@color/black"
         android:theme="@style/MyActionButtonStyle"
         android:background="@color/white"
