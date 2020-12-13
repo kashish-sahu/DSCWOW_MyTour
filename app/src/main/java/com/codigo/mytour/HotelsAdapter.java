@@ -45,7 +45,7 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "http://maps.google.com/maps?daddr="+hotels_list.get(position).getLongitude()+","+hotels_list.get(position).getLongitude();
+                String url = "http://maps.google.com/maps?daddr="+hotels_list.get(position).getLongitude()+","+hotels_list.get(position).getLatitude();
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 mContext.startActivity(i);
