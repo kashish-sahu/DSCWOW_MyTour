@@ -7,17 +7,17 @@
     <item
         android:id="@+id/attraction"
         android:title="ATTRACTIONS"
-        android:icon="@drawable/ic_baseline_menu"/>
+        android:icon="@drawable/ic_destination"/>
             <item
                 android:id="@+id/accomodation"
                 android:title="ACCOMODATIONS"
                 android:icon="@drawable/ic_hotel"/>
             <item
-                android:id="@+id/event"
+                android:id="@+id/food"
                 android:title="FOODS"
                 android:icon="@drawable/ic_dish"/>
             <item
-                android:id="@+id/settings"
+                android:id="@+id/logout"
                 android:title="LOGOUT"
                 android:icon="@drawable/ic_logout"/>
 </menu>

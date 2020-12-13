@@ -2,6 +2,7 @@ package com.codigo.mytour;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,13 +39,16 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
         holder.name.setText(hotels_list.get(position).getName());
         holder.address.setText(hotels_list.get(position).getAddress());
         Glide.with(mContext)
-                .load(R.drawable.mainbg)
+                .load(R.drawable.hotel_img)
                 .into(holder.img);
         holder.cost.setText(String.valueOf(hotels_list.get(position).getPrice()));
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mContext.startActivity(new Intent(mContext,DetailedActivity.class));
+                String url = "http://maps.google.com/maps?daddr="+hotels_list.get(position).getLongitude()+","+hotels_list.get(position).getLongitude();
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                mContext.startActivity(i);
             }
         });
     }

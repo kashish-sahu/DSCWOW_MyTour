@@ -4,13 +4,17 @@ public class HotelClass {
     String name;
     String address;
     int image;
-    int price;
+    String price;
+    String latitude;
+    String longitude;
 
-    public HotelClass(String name, String address, int image, int price) {
+    public HotelClass(String name, String address, int image, String price, String latitude, String longitude) {
         this.name = name;
         this.address = address;
         this.image = image;
         this.price = price;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public String getName() {
@@ -37,11 +41,27 @@ public class HotelClass {
         this.image = image;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 }

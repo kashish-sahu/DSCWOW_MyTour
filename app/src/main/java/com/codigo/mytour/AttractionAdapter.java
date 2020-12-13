@@ -18,9 +18,9 @@ import java.util.List;
 
 public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.MyViewHolder> {
     Activity mContext;
-    List<AttractionClass> cards_list;
+    List<TourismClass> cards_list;
 
-    public AttractionAdapter(Activity mContext, List<AttractionClass> cards_list) {
+    public AttractionAdapter(Activity mContext, List<TourismClass> cards_list) {
         this.mContext = mContext;
         this.cards_list = cards_list;
     }
@@ -35,15 +35,23 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull AttractionAdapter.MyViewHolder holder, int position) {
-        holder.title.setText(cards_list.get(position).getTitle());
-        holder.desc.setText(cards_list.get(position).getDescription());
+        holder.title.setText(cards_list.get(position).getName());
+        holder.desc.setText(cards_list.get(position).getLocation());
         Glide.with(mContext)
-                .load(R.drawable.mainbg)
+                .load(cards_list.get(position).getImage())
+                .fitCenter()
                 .into(holder.img);
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mContext.startActivity(new Intent(mContext,DetailedActivity.class));
+                Intent intent = new Intent(mContext,DetailedActivity.class);
+                intent.putExtra("image",cards_list.get(position).getImage());
+                intent.putExtra("latitude",cards_list.get(position).getLatitude());
+                intent.putExtra("longitude",cards_list.get(position).getLongitude());
+                intent.putExtra("description",cards_list.get(position).getDescription());
+                intent.putExtra("location",cards_list.get(position).getLocation());
+                intent.putExtra("name",cards_list.get(position).getName());
+                mContext.startActivity(intent);
             }
         });
     }

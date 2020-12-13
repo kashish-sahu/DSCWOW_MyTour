@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
@@ -33,6 +34,7 @@ public class FacilitiesActivity extends AppCompatActivity {
     TextView fuel,atm,rental,bank;
     RequestQueue mqueue;
     FacilitiesAdapter adapter;
+    ProgressBar loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +45,13 @@ public class FacilitiesActivity extends AppCompatActivity {
         rental=findViewById(R.id.rentals);
         bank=findViewById(R.id.bank);
         facilityList=new ArrayList<>();
+        loading=findViewById(R.id.loading);
+        loading.setVisibility(View.VISIBLE);
         mqueue= Volley.newRequestQueue(this);
         adapter = new FacilitiesAdapter(this,facilityList);
         facilityView.setLayoutManager(new LinearLayoutManager(this));
         facilityView.setAdapter(adapter);
-
+        getFacilities("atm");
         fuel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,6 +99,7 @@ public class FacilitiesActivity extends AppCompatActivity {
                             facilityList.add(new FacilityClass(name.toString(),tag,lat,longi));
                         }
                     }
+                    loading.setVisibility(View.INVISIBLE);
                     adapter.notifyDataSetChanged();
                 } catch (Exception e) {
                     e.printStackTrace();

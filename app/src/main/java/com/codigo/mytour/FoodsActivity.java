@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
@@ -30,6 +32,7 @@ public class FoodsActivity extends AppCompatActivity {
     List<FoodClass> foodList;
     RequestQueue mqueue;
     FoodAdapter adapter;
+    ProgressBar loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,8 @@ public class FoodsActivity extends AppCompatActivity {
         foodList=new ArrayList<>();
         mqueue= Volley.newRequestQueue(this);
         foodsView=findViewById(R.id.foodsView);
+        loading=findViewById(R.id.loading);
+        loading.setVisibility(View.VISIBLE);
         foodsView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new FoodAdapter(this,foodList);
         foodsView.setAdapter(adapter);
@@ -72,6 +77,7 @@ public class FoodsActivity extends AppCompatActivity {
                             }
                         }
                     }
+                    loading.setVisibility(View.INVISIBLE);
                     adapter.notifyDataSetChanged();
                 } catch (Exception e) {
                     e.printStackTrace();

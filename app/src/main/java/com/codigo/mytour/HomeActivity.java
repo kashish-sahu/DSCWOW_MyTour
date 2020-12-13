@@ -29,6 +29,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.os.ParcelableCompatCreatorCallbacks;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -48,6 +49,11 @@ import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -63,7 +69,7 @@ import java.util.TimerTask;
 public class HomeActivity extends AppCompatActivity{
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    CardView menu,facility,food;
+    CardView menu,facility,food,accomodation,gallery,map,volunteer;
     ImageView bg,img_a,img_b,img_c,img_d;
 
     @Override
@@ -73,6 +79,10 @@ public class HomeActivity extends AppCompatActivity{
         navigationView=findViewById(R.id.nav_menu);
         drawerLayout=findViewById(R.id.drawer_layout);
         menu = findViewById(R.id.menu);
+        accomodation=findViewById(R.id.accomodation);
+        gallery=findViewById(R.id.gallery);
+        map=findViewById(R.id.map);
+        volunteer=findViewById(R.id.volunteer);
         food=findViewById(R.id.food);
         bg=findViewById(R.id.bg);
         img_a=findViewById(R.id.img_a);
@@ -120,7 +130,30 @@ public class HomeActivity extends AppCompatActivity{
                 drawerLayout.openDrawer(Gravity.LEFT);
             }
         });
-
+        accomodation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,HotelsActivity.class));
+            }
+        });
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,AttractionsActivity.class));
+            }
+        });
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Will be introduced soon!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        volunteer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Will be introduced soon!",Toast.LENGTH_SHORT).show();
+            }
+        });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -129,6 +162,10 @@ public class HomeActivity extends AppCompatActivity{
                     break;
                     case R.id.accomodation: startActivity(new Intent(HomeActivity.this,HotelsActivity.class));
                         break;
+                    case R.id.food: startActivity(new Intent(HomeActivity.this,FoodsActivity.class));
+                    break;
+                    case R.id.logout: finish();
+                    break;
                 }
                 return true;
             }

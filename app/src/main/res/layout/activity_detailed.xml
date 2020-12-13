@@ -2,13 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawer_layout"
-    tools:context=".HomeActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".HomeActivity">
+
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/mainimg"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:background="@color/black"
@@ -30,8 +33,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/arrow_back"
-            android:backgroundTint="@color/white"
-            />
+            android:backgroundTint="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,40 +43,60 @@
             android:backgroundTint="@color/white"
             android:orientation="vertical"
             android:padding="20dp">
+
             <TextView
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MYSORE PALACE"
-                android:id="@+id/locate"
-                android:textSize="25sp"
                 android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:text="MYSORE PALACE"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="LOCATION"
-                android:textSize="15sp"
-                android:layout_marginTop="20dp"/>
+                android:textSize="15sp" />
+
             <TextView
+                android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
                 android:text="Sayyaji Rao Rd, Agrahara, Chamrajpura, Mysuru"
-                android:textSize="15sp"
-                android:layout_marginTop="7dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="ABOUT THIS PLACE"
-                android:textSize="15sp"
-                android:layout_marginTop="20dp"/>
+                android:textSize="15sp" />
+
             <TextView
+                android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Mysore Palace is a historical palace and the royal residence at Mysore in the Indian State of Karnataka. It is the official residence of the Wadiyar dynasty and the seat of the Kingdom of Mysore. The palace is in the centre of Mysore, and faces the Chamundi Hills eastward."
-                android:textSize="15sp"
                 android:layout_marginTop="7dp"
+                android:text="The Mysore Palace is a historical palace and the royal residence at Mysore in the Indian State of Karnataka. It is the official residence of the Wadiyar dynasty and the seat of the Kingdom of Mysore. The palace is in the centre of Mysore, and faces the Chamundi Hills eastward."
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/locate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_destination" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spot on Map"
                 android:textColor="@color/black" />
         </LinearLayout>
 
